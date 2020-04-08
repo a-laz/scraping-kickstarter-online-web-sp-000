@@ -20,5 +20,4 @@ class Author
   def save
     @@all << self
   end
-
 end
