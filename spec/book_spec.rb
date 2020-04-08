@@ -11,6 +11,6 @@ describe "#initialize" do
 
   it "initializes a Book instance with an author" do
     book = Book.new("Old man in the Sea", "Moby")
-    expect(book.author).to eq("Moby")
+    expect(book.read).to eq(false)
   end
 end
