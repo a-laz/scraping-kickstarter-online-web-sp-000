@@ -33,6 +33,10 @@ class Author
     @@all << self
   end
 
+  def self.all
+    @@all
+  end
+
   def add_book(book)
     @book << book
     book.author = self unless book.author == self
