@@ -15,10 +15,6 @@ class Book
     @@all
   end
 
-  def author_name(author)
-    self.author = author unless self.author == author
-  end
-
   def author_name=(name)
     self.author = Author.find_or_create_by_name(name)
     author.add_book(self)
