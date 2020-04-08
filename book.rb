@@ -45,4 +45,8 @@ class Author
   def books
     Book.all.select{|book| book.author == self }
   end
+
+  def find_by_name(name)
+    self.all.find{|author| author.name == name}
+  end
 end
