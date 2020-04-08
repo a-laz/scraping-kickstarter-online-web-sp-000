@@ -1,5 +1,3 @@
-require_relative './book.rb'
-
 describe "#initialize" do
   it "initializes a Book instance with a title" do
     book = Book.new("Old man in the Sea", "Moby")
