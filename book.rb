@@ -1,9 +1,8 @@
 class Book
   attr_accessor :title, :author, :read
 
-  def initialize(title, author)
+  def initialize(title)
     @title = title
-    @author = author
     @read = false
     save
   end
@@ -14,6 +13,10 @@ class Book
 
   def self.all
     @@all
+  end
+
+  def author_name(author)
+    self.author = author unless self.author == author
   end
 end
 
@@ -32,6 +35,10 @@ class Author
 
   def add_book(book)
     @book << book
-    book.author = self
+    book.author = self unless book.author == self
+  end
+
+  def books
+    Book.all.select{|book| book.author == self }
   end
 end
