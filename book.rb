@@ -54,4 +54,12 @@ class Author
   def self.find_or_create_by_name(name)
     self.find_by_name(name) ? self.find_by_name(name) : self.new(name)
   end
+
+  def self.find_not_read_by_author(name)
+    self.find_by_name(name).books.select{|book| book.read == false}
+  end
+
+  def self.find_read_by_author(name)
+    self.find_by_name(name).books.select{|book| book.read == true}
+  end
 end
