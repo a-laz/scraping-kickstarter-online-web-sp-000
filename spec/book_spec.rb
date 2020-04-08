@@ -8,4 +8,9 @@ describe "#initialize" do
     book = Book.new("Old man in the Sea", "Moby")
     expect(book.author).to eq("Moby")
   end
+
+  it "initializes a Book instance with an author" do
+    book = Book.new("Old man in the Sea", "Moby")
+    expect(book.author).to eq("Moby")
+  end
 end
