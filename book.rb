@@ -29,4 +29,9 @@ class Author
   def save
     @@all << self
   end
+
+  def add_book(book)
+    @book << book
+    book.author = self
+  end
 end
