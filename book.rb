@@ -8,7 +8,7 @@ class Book
   end
 end
 
-class Author 
+class Author
   attr_accessor :name
   @@all = []
 
@@ -20,5 +20,5 @@ class Author
   def save
     @@all << self
   end
-  
+
 end
